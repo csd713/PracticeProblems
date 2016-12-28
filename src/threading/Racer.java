@@ -13,6 +13,15 @@ public class Racer implements Runnable {
 
 			System.out.println(
 					"Distance Covered by " + Thread.currentThread().getName() + " is " + distance + " meeters");
+
+			if (distance == 60 && Thread.currentThread().getName().equals("Hare")) {
+				try {
+					System.out.println("Hare is sleeping");
+					Thread.sleep(1000 * 10);// 10 seconds
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
 			// Check if someone has won
 			boolean isRaceWon = this.isRaceWon(distance);
 			if (isRaceWon)
