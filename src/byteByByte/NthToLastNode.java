@@ -40,7 +40,25 @@ public class NthToLastNode {
 		list.next = new Node(50);
 		list = list.next;
 
-		nthToLastNode(temp, 0);
+		nthToLastNode(temp, 2);
+
+		int dummy = printNthLast(temp, 2);
+
+	}
+
+	// Recursive method to print the Nth node from last node
+
+	public static int printNthLast(Node head, int n) {
+
+		if (head == null)
+			return -1;
+
+		int index = printNthLast(head.next, n) + 1;
+
+		if (index == n)
+			System.out.println(n + "th node from last is " + head.value);
+
+		return index;
 	}
 
 }
