@@ -3,6 +3,8 @@
  */
 package byteByByte;
 
+import linkedList.Node;
+
 //Finding a node that is n steps away from the last node
 //Use two pointers to find it in a single pass of loop
 public class NthToLastNode {

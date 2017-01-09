@@ -1,13 +1,13 @@
 /**
  * Created by Chiru on Jan 1, 2017
  */
-package byteByByte;
+package linkedList;
 
 public class Node {
-	int value;
-	Node next;
+	public int value;
+	public Node next;
 
-	Node(int value) {
+	public Node(int value) {
 		this.value = value;
 	}
 }
