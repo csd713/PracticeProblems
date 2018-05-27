@@ -8,6 +8,7 @@ package cci;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class Graph {
@@ -56,6 +57,36 @@ public class Graph {
 					stack.push(v);
 				}
 			}
+		}
+	}
+
+	public void BFS(int start) {
+		// To keep track of visited nodes
+		boolean[] visited = new boolean[size];
+
+		Queue<Integer> q = new LinkedList<>();
+		// Add the first node to Q and mark it as visited
+		q.add(start);
+		visited[start] = true;
+
+		while (!q.isEmpty()) {
+
+			// dequeue and print the nodeÏ
+			start = q.poll();
+			System.out.println(start + " ");
+
+			// add the nodes that are adjacent to current node to Q if they aren't
+			// visited already and mark them as visited
+			Iterator<Integer> itr = adjacencyList[start].iterator();
+			while (itr.hasNext()) {
+				int var = itr.next();
+				// Check if the node is visited
+				if (!visited[var]) {
+					q.add(var);
+					visited[var] = true;
+				}
+			}
+
 		}
 	}
 }

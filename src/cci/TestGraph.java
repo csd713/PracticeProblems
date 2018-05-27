@@ -12,9 +12,10 @@ public class TestGraph {
 		g.addEdge(2, 1);
 		g.addEdge(0, 3);
 		g.addEdge(1, 4);
-
-		g.DFS(0);
-
+		System.out.println("Printing DFS:");
+		g.DFS(2);
+		System.out.println("Printing BFS:");
+		g.BFS(2);
 	}
 
 }
